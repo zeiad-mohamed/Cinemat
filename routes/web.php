@@ -43,7 +43,7 @@ Route::middleware('guest')->group(function () {
         return view('auth.login');
     })->name('login');
 
-    Route::post('register', [UserController::class, 'store'])->name('register');
+    Route::post('register', [UserController::class, 'store']);
     Route::get('register', function () {
         return view('auth.register', [
             'roles' => Role::all()->collect()->whereNotIn('code', Role::ADMIN_CODE),
