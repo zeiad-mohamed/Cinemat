@@ -179,7 +179,7 @@ http {
 
 [phases.build]
 cmds = [
-  "cp .env.example .env"
+  "cp .env.example .env",
   "php artisan key:generate --force",
   "php artisan storage:link",
   "php artisan config:cache",
