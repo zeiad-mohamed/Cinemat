@@ -7,12 +7,6 @@ cmds = [
     "cp /assets/worker-*.conf /etc/supervisor/conf.d/",
     "cp /assets/supervisord.conf /etc/supervisord.conf",
     "chmod +x /assets/start.sh",
-    "cp .env.example .env",
-    "php /app/artisan key:generate --force",
-    "php /app/artisan storage:link",
-    "php /app/artisan config:cache",
-    "php /app/artisan route:cache",
-    "php /app/artisan view:cache"
 ]
 
 [start]
@@ -184,6 +178,12 @@ http {
 
 [phases.start]
 cmds = [
-  "php artisan migrate --force",
-  "php artisan db:seed"
+    "cp /app/.env.example /app/.env",
+    "php /app/artisan migrate --force",
+    "php /app/artisan db:seed",
+    "php /app/artisan key:generate --force",
+    "php /app/artisan storage:link",
+    "php /app/artisan config:cache",
+    "php /app/artisan route:cache",
+    "php /app/artisan view:cache"
 ]
