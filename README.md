@@ -1,4 +1,11 @@
-![Cinemat Logo](./public/images/branding/logos/logo-w.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./public/images/branding/logos/logo-wt.png">
+    <source media="(prefers-color-scheme: light)" srcset="./public/images/branding/logos/logo-bt.png">
+    <img alt="IZ Online Education" src="./public/images/branding/logos/logo-bt.png">
+  </picture>
+</p>
+
 
 # About Project
 
@@ -47,7 +54,7 @@ You can find a link to the website **[here](https://cinemat.zeiadmohamed.dev)**.
 
 1. Clone the repository by running the following command in your terminal or command prompt:
     ```bash
-    git clone https://github.com/ziadabdo98/Cinemat.git
+    git clone https://github.com/zeiad-mohamed/Cinemat.git
     ```
 2. Change into the project directory:
     ```bash
